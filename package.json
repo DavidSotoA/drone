@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron app.js"
+    "start": "nodemon --watch ./ --exec \"electron app.js\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^5.0.8"
+    "electron": "^5.0.8",
+    "nodemon": "^1.19.1"
   }
 }

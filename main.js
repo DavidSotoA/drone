@@ -1,5 +1,16 @@
-const dgram = require('dgram');
 const Drone = require('./Drone')
-const client = dgram.createSocket('udp4');
 
-const drone = new Drone(client, 8889, '192.168.10.1')
+function onKeyDown(event) {
+    var key = event.keyCode || event.which;
+    var keychar = String.fromCharCode(key);
+    if (document.readyState === 'complete') {
+        drone.sendMessage('command')
+    }
+    
+}
+
+const drone = new Drone(8889, '192.168.10.1')
+drone.start()
+
+
+
